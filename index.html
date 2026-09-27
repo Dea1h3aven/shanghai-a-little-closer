@@ -1,0 +1,46 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="theme-color" content="#f7f7f2">
+  <title>Shanghai, a little closer</title>
+  <meta name="description" content="A small collection of Shanghai food, neighbourhood finds and useful tips for two. Chinese names and Amap links included.">
+  <link rel="icon" type="image/svg+xml" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Crect width='32' height='32' rx='8' fill='%23bc342a'/%3E%3Cpath d='M21 10c-7-4-13 3-5 6s2 10-5 6' fill='none' stroke='white' stroke-width='3' stroke-linecap='round'/%3E%3C/svg%3E">
+  <link rel="stylesheet" href="assets/leaflet.css">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <header class="masthead">
+    <a class="brand" href="#map" aria-label="Shanghai guide home"><span class="seal" aria-hidden="true">沪</span><span>Shanghai<span class="brand-note">A LITTLE CLOSER</span></span></a>
+    <nav class="main-nav" aria-label="Guide views">
+      <button class="nav-button active" data-view="map" aria-selected="true">Map</button>
+      <button class="nav-button" data-view="eat" aria-selected="false">Eat</button>
+      <button class="nav-button" data-view="tips" aria-selected="false">Little tips</button>
+    </nav>
+  </header>
+  <main>
+    <section class="intro"><div><span class="eyebrow">A FEW IDEAS FOR YOU BOTH</span><h1>Follow your appetite.</h1></div><p>For when you’re hungry and wondering what’s nearby.<br> Your own plans come first.</p></section>
+    <details class="friend-note">
+      <summary><span>A little note from me</span><small>Put together with AI</small><span class="note-toggle" aria-hidden="true">＋</span></summary>
+      <div class="friend-note-body">
+        <p>AI deserves the credit for putting this together. I mainly gave it the restaurant names, and it did the research, organised the tips and built this little guide.</p>
+        <p>I hope some of it comes in handy! I could keep adding ideas forever, so these are just a few tips. Please keep following the plans you’ve made together. The map is simply there for when you’re hungry and wondering what’s nearby, in case it gives you a little inspiration.</p>
+        <p class="friend-wish">Hope you both have a wonderful trip to China!</p>
+      </div>
+    </details>
+    <section id="map-view" class="view active" aria-label="Places on the map">
+      <div class="filter-row" aria-label="Food categories"><button class="filter active">Shanghai bites</button><button class="filter">Regional Chinese</button><button class="filter">Japanese</button></div>
+      <div class="map-layout"><div class="map-wrap"><div id="map"><div class="map-loading">Loading the neighbourhood map…</div></div><div class="map-caption">Shanghai · open a place in Amap for directions</div></div><aside class="place-panel"><div class="section-heading"><span class="eyebrow">A LOCAL START</span><span class="count">01</span></div><article class="feature-card"><span class="cuisine">PAN-FRIED DUMPLINGS</span><h2>Da Hu Chun</h2><p class="chinese-name" lang="zh-CN">大壶春 · 四川中路店</p><p class="area">South Bund</p><div class="dish-block"><span class="eyebrow">TRY THIS</span><h3>Pork shengjian</h3><p>Fluffy dough, a crisp base and a little sweet-savoury pork filling.</p></div><p class="small-tip">Expect a soft little bun with a crisp bottom. This style has less soup inside.</p><p class="address" lang="zh-CN">黄浦区四川中路136号</p><a class="amap-link" target="_blank" rel="noopener noreferrer" href="https://ditu.amap.com/place/B0FFGJN697">Open in Amap <span aria-hidden="true">↗</span></a></article></aside></div>
+    </section>
+    <section id="eat-view" class="view" aria-label="Food choices" hidden></section>
+    <section id="tips-view" class="view" aria-label="Practical tips" hidden></section>
+  </main>
+  <footer><span>Small choices. Your own Shanghai.</span><span>Compiled · 27 Sep 2026 · Check current opening hours</span></footer>
+  <dialog id="place-dialog" aria-label="Restaurant details"><button class="dialog-close" aria-label="Close restaurant details">×</button><div id="dialog-content"></div></dialog>
+  <div id="toast" role="status" aria-live="polite"></div>
+  <script src="assets/leaflet.js"></script>
+  <script src="data.js"></script>
+  <script src="app.js"></script>
+</body>
+</html>
